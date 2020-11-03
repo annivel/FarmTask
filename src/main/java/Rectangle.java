@@ -1,30 +1,31 @@
 public class Rectangle {
-    private int weightMinX;
-    private int heightMinY;
-    private int weightMaxX;
-    private int heightMaxY;
 
-    public int getWeightMinX() {
-        return weightMinX;
+    private int minX;
+    private int minY;
+    private int maxX;
+    private int maxY;
+
+    public int getMinX() {
+        return minX;
     }
 
-    public int getHeightMinY() {
-        return heightMinY;
+    public int getMinY() {
+        return minY;
     }
 
-    public int getWeightMaxX() {
-        return weightMaxX;
+    public int getMaxX() {
+        return maxX;
     }
 
-    public int getHeightMaxY() {
-        return heightMaxY;
+    public int getMaxY() {
+        return maxY;
     }
 
-    public Rectangle(int weightMinX, int heightMinY, int weightMaxX, int heightMaxY) {
-        this.weightMinX = weightMinX;
-        this.heightMinY = heightMinY;
-        this.weightMaxX = weightMaxX;
-        this.heightMaxY = heightMaxY;
+    public Rectangle(int minX, int minY, int maxX, int maxY) {
+        this.minX = minX;
+        this.minY = minY;
+        this.maxX = maxX;
+        this.maxY = maxY;
 
     }
 

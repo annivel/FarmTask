@@ -10,8 +10,8 @@ public class Sheep implements Action {
     }
 
     private boolean checkOutOfFarm(int x, int y) {
-        if (x < farm.getFarm().getWeightMinX() && y < farm.getFarm().getHeightMinY()
-                || x > farm.getFarm().getWeightMaxX() && y > farm.getFarm().getHeightMaxY()) {
+        if (x < farm.getFarm().getMinX() || y < farm.getFarm().getMinY()
+                || x > farm.getFarm().getMaxX() || y > farm.getFarm().getMaxY()) {
             return false;
         }
         return true;

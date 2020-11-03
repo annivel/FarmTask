@@ -5,13 +5,13 @@ public class TestFarm {
         Rectangle blockSquare  = new Rectangle(80,50,110,70);
 
         Farm farm = new Farm(farmSquare, blockSquare);
-        Dog dog = new Dog(farm ,40,45);
+        Dog dog = new Dog(farm ,41,46);
         Sheep sheep = new Sheep(farm,130, 33);
 
         System.out.println(dog.getCoordinate());
         System.out.println(sheep.getCoordinate());
-        System.out.println(dog.move(70,55));
-        System.out.println(sheep.move(40,30));
+        System.out.println(dog.move(48,70));
+        System.out.println(sheep.move(-122,90));
         System.out.println(dog.getCoordinate());
         System.out.println(sheep.getCoordinate());
 

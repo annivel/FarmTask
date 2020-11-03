@@ -5,7 +5,7 @@ public class TestFarm {
         Rectangle blockSquare  = new Rectangle(80,50,110,70);
 
         Farm farm = new Farm(farmSquare, blockSquare);
-        Dog dog = new Dog(farm ,41,46);
+        Dog dog = new Dog(farm,41,46);
         Sheep sheep = new Sheep(farm,130, 33);
 
         System.out.println(dog.getCoordinate());

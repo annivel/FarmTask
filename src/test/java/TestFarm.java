@@ -1,17 +1,17 @@
 public class TestFarm {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
+        Rectangle farmSquare  = new Rectangle(40,30,130,90);
+        Rectangle blockSquare  = new Rectangle(80,50,110,70);
 
-        Farm farm = new Farm(4, 6);
-        farm.initBlock("1-3", "1-4", "2-3", "2-4");
-
-        Dog dog = new Dog(farm ,0, 0);
-        Sheep sheep = new Sheep(farm,0, 0);
+        Farm farm = new Farm(farmSquare, blockSquare);
+        Dog dog = new Dog(farm ,40,45);
+        Sheep sheep = new Sheep(farm,130, 33);
 
         System.out.println(dog.getCoordinate());
         System.out.println(sheep.getCoordinate());
-        System.out.println(dog.move(1,2));
-        System.out.println(sheep.move(1,4));
+        System.out.println(dog.move(70,55));
+        System.out.println(sheep.move(40,30));
         System.out.println(dog.getCoordinate());
         System.out.println(sheep.getCoordinate());
 

@@ -4,26 +4,30 @@ public class Sheep implements Action {
     private int yLimit;
     private Farm farm;
 
-    public Sheep(Farm farm, int x, int y ) throws Exception {
-        if (x > farm.getSquareX() || x < 0 || y > farm.getSquareY() || y < 0) {
-            throw new Exception("Please, set sheep up to the valid points");
-        }
-        this.xLimit = x;
-        this.yLimit = y;
+    public Sheep(Farm farm, int x, int y) {
         this.farm = farm;
+        this.move(x, y);
     }
 
-    @Override
-    public boolean move(int x, int y) {
-        if (x > farm.getSquareX() || x < 0 || y > farm.getSquareY() || y < 0) {
+    private boolean checkOutOfFarm(int x, int y) {
+        if (x < farm.getFarm().getWeightMinX() && y < farm.getFarm().getHeightMinY()
+                || x > farm.getFarm().getWeightMaxX() && y > farm.getFarm().getHeightMaxY()) {
             return false;
         }
-        this.xLimit = x;
-        this.yLimit = y;
         return true;
     }
 
     public String getCoordinate() {
         return String.format("Sheep: x=%d, y=%d", this.xLimit, this.yLimit);
+    }
+
+    @Override
+    public boolean move(int x, int y) {
+        if (checkOutOfFarm(x, y)) {
+            this.xLimit = x;
+            this.yLimit = y;
+            return true;
+        }
+        return false;
     }
 }

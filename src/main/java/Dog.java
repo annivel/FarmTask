@@ -3,33 +3,37 @@ public class Dog implements Action {
     private int yLimit;
     private Farm farm;
 
-    public Dog(Farm farm, int x, int y) throws Exception {
-        if (x > farm.getSquareX() || x < 0 || y > farm.getSquareY() || y < 0
-                || farm.getBlockPoints().contains(String.format("%d-%d", x, y))) {
-            throw new Exception("Please, set dog up to the valid points");
-        }
-        this.xLimit = x;
-        this.yLimit = y;
+    public Dog(Farm farm, int x, int y) {
         this.farm = farm;
+        this.move(x, y);
     }
 
-    @Override
-    public boolean move(int x, int y) {
-        //check out of farm
-        if (x > farm.getSquareX() || x < 0 || y > farm.getSquareY() || y < 0) {
+    private boolean checkOutOfFarm(int x, int y) {
+        if (x < farm.getFarm().getWeightMinX() && y < farm.getFarm().getHeightMinY()
+                || x > farm.getFarm().getWeightMaxX() && y > farm.getFarm().getHeightMaxY()) {
             return false;
         }
-        // check block points
-        if (!farm.getBlockPoints().contains(String.format("%d-%d", x, y))) {
-            this.xLimit = x;
-            this.yLimit = y;
-            return true;
+        return true;
+    }
+
+    private boolean checkBlock(int x, int y) {
+        if (x >= farm.getBlock().getWeightMinX() && y >= farm.getBlock().getHeightMinY()
+                || x <= farm.getBlock().getWeightMaxX() && y <= farm.getBlock().getHeightMaxY()) {
+            return false;
         }
-        return false;
+        return true;
     }
 
     public String getCoordinate() {
         return String.format("Dog: x=%d, y=%d", this.xLimit, this.yLimit);
     }
 
+    @Override
+    public boolean move(int x, int y) {
+        if (checkOutOfFarm(x, y) && checkBlock(x, y)) {
+            this.xLimit = x;
+            this.yLimit = y;
+        }
+        return false;
+    }
 }

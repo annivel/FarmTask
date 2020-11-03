@@ -1,35 +1,18 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
 public class Farm {
+    private Rectangle farm;
+    private Rectangle block;
 
-    private int squareX;
-    private int squareY;
-    private List<String> blockPoints = new LinkedList<>();
-
-    public List<String> getBlockPoints() {
-        return blockPoints;
+    public Farm(Rectangle farm, Rectangle block) {
+        this.farm = farm;
+        this.block = block;
     }
 
-    public int getSquareX() {
-        return squareX;
+    public Rectangle getFarm() {
+        return farm;
     }
 
-    public int getSquareY() {
-        return squareY;
+    public Rectangle getBlock() {
+        return block;
     }
-
-    public Farm(int x, int y) {
-        this.squareX = x;
-        this.squareY= y;
-    }
-
-
-    public void initBlock(String... values) {
-        blockPoints.addAll(Arrays.asList(values));
-    }
-
-
 }
 

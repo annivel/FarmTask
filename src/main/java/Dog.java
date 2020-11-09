@@ -38,4 +38,5 @@ public class Dog implements Action {
         }
         return false;
     }
+
 }

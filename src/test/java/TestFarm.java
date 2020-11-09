@@ -10,11 +10,10 @@ public class TestFarm {
 
         System.out.println(dog.getCoordinate());
         System.out.println(sheep.getCoordinate());
-        System.out.println(dog.move(48,70));
+        System.out.println(dog.move(4,70));
         System.out.println(sheep.move(-122,90));
         System.out.println(dog.getCoordinate());
         System.out.println(sheep.getCoordinate());
-
 
     }
 }

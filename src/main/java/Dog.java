@@ -1,4 +1,5 @@
 public class Dog implements Action {
+    
     private int xLimit;
     private int yLimit;
     private Farm farm;

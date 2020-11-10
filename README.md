@@ -17,7 +17,9 @@ So what we will get if we call the method "move" for the dog with the fence squa
 Check it out in my repository!
 
 In addition, I've created a UNIT tests, so you can find it at the "TestSuits" class
-and also I've implement test cases for this project 
+
+
+and also I've implemented test cases for this project 
 
 
 https://docs.google.com/spreadsheets/d/10qzkXc4RldXtagCq9XITZdm-5l9GXo1hzGJMV5fCC3c/edit?usp=sharing

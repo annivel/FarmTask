@@ -5,22 +5,6 @@ public class Rectangle {
     private int maxX;
     private int maxY;
 
-    public int getMinX() {
-        return minX;
-    }
-
-    public int getMinY() {
-        return minY;
-    }
-
-    public int getMaxX() {
-        return maxX;
-    }
-
-    public int getMaxY() {
-        return maxY;
-    }
-
     public Rectangle(int minX, int minY, int maxX, int maxY) {
         this.minX = minX;
         this.minY = minY;
@@ -28,5 +12,11 @@ public class Rectangle {
         this.maxY = maxY;
 
     }
-
+    public boolean isPointInRectangle(int x, int y) {
+        if (x >= minX && y >= minY
+                && x <= maxX && y <=maxY) {
+            return true;
+        }
+        return false;
+    }
 }

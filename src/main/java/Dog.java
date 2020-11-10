@@ -1,38 +1,15 @@
-public class Dog implements Action {
-    private int xLimit;
-    private int yLimit;
-    private Farm farm;
+public class Dog extends ActionAnimal {
 
     public Dog(Farm farm, int x, int y) {
-        this.farm = farm;
-        this.move(x, y);
-    }
-
-    private boolean isCheckOutOfFarm(int x, int y) {
-        if (x < farm.getFarm().getMinX() || y < farm.getFarm().getMinY()
-                || x > farm.getFarm().getMaxX() || y > farm.getFarm().getMaxY()) {
-            return false;
-        }
-        return true;
-    }
-
-    private boolean isCheckBlock(int x, int y) {
-        if (x >= farm.getBlock().getMinX() && y >= farm.getBlock().getMinY()
-            && x <= farm.getBlock().getMaxX() && y <= farm.getBlock().getMaxY()) {
-            return false;
-        }
-        return true;
-    }
-
-    public String getCoordinate() {
-        return String.format("Dog: x=%d, y=%d", this.xLimit, this.yLimit);
+        super(farm,x,y);
     }
 
     @Override
     public boolean move(int x, int y) {
-        if (isCheckOutOfFarm(x, y) && isCheckBlock(x, y)) {
-            this.xLimit = x;
-            this.yLimit = y;
+        if (super.farm.getFarmSquare().isPointInRectangle(x,y)
+                && !farm.getBlockSquare().isPointInRectangle(x,y)) {
+            super.x = x;
+            super.y = y;
             return true;
         }
         return false;

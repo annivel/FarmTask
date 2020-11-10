@@ -1,6 +1,12 @@
 # FarmTask
 The main goal of this task is the implementation of the Farm image with the animals: Dog and Sheep. 
 
+This project is implemented such as technologies and libraries as:
+
+  - Java
+  - Maven
+  - TesNG
+
 The structure of the Farm we can imagine as two Rectangle. There are two objects: the farm and inside the farm, we have the fence.
  - The sheep has the access to all objects like the fence square and the farm square. 
  - The dog has the access to the Farm but doesn't have the access to the fence square.

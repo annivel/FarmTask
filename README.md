@@ -1,7 +1,7 @@
 # FarmTask
 The main goal of this task is the implementation of the Farm image with the animals: Dog and Sheep. 
 
-This project is implemented such as technologies and libraries as:
+This project is implemented such as technologies as:
 
   - Java
   - Maven

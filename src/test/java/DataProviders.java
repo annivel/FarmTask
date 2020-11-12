@@ -13,7 +13,7 @@ public interface DataProviders {
     int BLOCK_MAX_CORNER_Y = 70;
 
     @DataProvider
-    public default Object[][] getDogDataFarm() {
+    default Object[][] getDogDataFarm() {
         return new Object[][]{
                 {60, 40, true},
                 {40, 30, true},
@@ -31,7 +31,7 @@ public interface DataProviders {
     }
 
     @DataProvider
-    public default Object[][] getSheepDataFarm() {
+    default Object[][] getSheepDataFarm() {
         return new Object[][]{
                 {67, 82, true},
                 {-10, 15, false},
@@ -50,7 +50,7 @@ public interface DataProviders {
     }
 
     @DataProvider
-    public default Object[][] getSheepDataBlock() {
+    default Object[][] getSheepDataBlock() {
         return new Object[][]{
                 {100, 60, true},
                 {81, 51, true},
@@ -73,7 +73,7 @@ public interface DataProviders {
     }
 
     @DataProvider
-    public default Object[][] getDogDataBlock() {
+    default Object[][] getDogDataBlock() {
         return new Object[][]{
                 {90, 60, false},
                 {80, 50, false},
@@ -93,5 +93,4 @@ public interface DataProviders {
                 {120, 60, true}
         };
     }
-
 }

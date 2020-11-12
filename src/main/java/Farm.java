@@ -11,6 +11,7 @@ public class Farm {
     public Rectangle getFarmSquare() {
         return farmSquare;
     }
+
     public Rectangle getBlockSquare() {
         return blockSquare;
     }

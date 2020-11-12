@@ -12,6 +12,7 @@ public class Rectangle {
         this.maxY = maxY;
 
     }
+
     public boolean isPointInRectangle(int x, int y) {
         return x >= minX && y >= minY
                 && x <= maxX && y <= maxY;

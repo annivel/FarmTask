@@ -35,4 +35,5 @@ public class TestSuites extends BaseTest {
         assertEquals(sheep.move(x, y), expectedResult, String.format("The entered coordinates: x=%d, y=%d aren't related to the yard xMin=%d, xMax=%d, yMin=%d, yMax=%d ",
                 x, y, BLOCK_MIN_CORNER_X, BLOCK_MAX_CORNER_X, BLOCK_MIN_CORNER_Y, BLOCK_MAX_CORNER_Y));
     }
+
 }

@@ -6,8 +6,6 @@ public class Dog extends ActionAnimal {
 
     @Override
     public boolean move(int x, int y) {
-        Rectangle rectangle = farm.getBlockSquare();
-
         if (farm.getFarmSquare().isPointInRectangle(x, y)
                 && !farm.getBlockSquare().isPointInRectangle(x, y)) {
             this.x = x;

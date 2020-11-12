@@ -9,7 +9,5 @@ public abstract class ActionAnimal {
         this.move(x, y);
     }
     public abstract boolean move(int x, int y);
-
-
 }
 

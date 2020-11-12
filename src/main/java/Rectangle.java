@@ -13,10 +13,7 @@ public class Rectangle {
 
     }
     public boolean isPointInRectangle(int x, int y) {
-        if (x >= minX && y >= minY
-                && x <= maxX && y <=maxY) {
-            return true;
-        }
-        return false;
+        return x >= minX && y >= minY
+                && x <= maxX && y <= maxY;
     }
 }

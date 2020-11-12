@@ -1,6 +1,7 @@
 public class TestFarm {
 
     public static void main(String[] args) {
+
         Rectangle farmSquare  = new Rectangle(40,30,130,90);
         Rectangle blockSquare  = new Rectangle(80,50,110,70);
 

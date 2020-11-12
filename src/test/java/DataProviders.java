@@ -1,9 +1,19 @@
 import org.testng.annotations.DataProvider;
 
-public class DataProviders {
+public interface DataProviders {
+
+    int FARM_MIN_CORNER_X = 40;
+    int FARM_MAX_CORNER_X = 130;
+    int FARM_MIN_CORNER_Y = 30;
+    int FARM_MAX_CORNER_Y = 90;
+
+    int BLOCK_MIN_CORNER_X = 80;
+    int BLOCK_MAX_CORNER_X = 110;
+    int BLOCK_MIN_CORNER_Y = 50;
+    int BLOCK_MAX_CORNER_Y = 70;
 
     @DataProvider
-    public Object[][] getDogDataFarm() {
+    public default Object[][] getDogDataFarm() {
         return new Object[][]{
                 {60, 40, true},
                 {40, 30, true},
@@ -21,7 +31,7 @@ public class DataProviders {
     }
 
     @DataProvider
-    public Object[][] getSheepDataFarm() {
+    public default Object[][] getSheepDataFarm() {
         return new Object[][]{
                 {67, 82, true},
                 {-10, 15, false},
@@ -40,7 +50,7 @@ public class DataProviders {
     }
 
     @DataProvider
-    public Object[][] getSheepDataBlock() {
+    public default Object[][] getSheepDataBlock() {
         return new Object[][]{
                 {100, 60, true},
                 {81, 51, true},
@@ -63,7 +73,7 @@ public class DataProviders {
     }
 
     @DataProvider
-    public Object[][] getDogDataBlock() {
+    public default Object[][] getDogDataBlock() {
         return new Object[][]{
                 {90, 60, false},
                 {80, 50, false},
@@ -83,4 +93,5 @@ public class DataProviders {
                 {120, 60, true}
         };
     }
+
 }

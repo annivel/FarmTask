@@ -5,13 +5,13 @@ import org.testng.annotations.DataProvider;
 public class DataProviders {
 
     public static final int FARM_MIN_CORNER_X = 40;
-    public static final  int FARM_MAX_CORNER_X = 130;
-    public static final  int FARM_MIN_CORNER_Y = 30;
+    public static final int FARM_MAX_CORNER_X = 130;
+    public static final int FARM_MIN_CORNER_Y = 30;
     public static final int FARM_MAX_CORNER_Y = 90;
-    public static final   int BLOCK_MIN_CORNER_X = 80;
+    public static final int BLOCK_MIN_CORNER_X = 80;
     public static final int BLOCK_MAX_CORNER_X = 110;
     public static final int BLOCK_MIN_CORNER_Y = 50;
-    public static final  int BLOCK_MAX_CORNER_Y = 70;
+    public static final int BLOCK_MAX_CORNER_Y = 70;
 
     @DataProvider
     public static Object[][] getDogDataFarm() {

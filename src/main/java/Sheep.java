@@ -1,3 +1,4 @@
+
 public class Sheep extends ActionAnimal {
 
     public Sheep(Farm farm, int x, int y) {

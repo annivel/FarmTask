@@ -14,22 +14,46 @@ public class TestSuites {
 
     @Test(dataProvider = "getDogDataFarm", dataProviderClass = DataProviders.class)
     public void checkMoveForDogToFarm(int x, int y, boolean expectedResult) {
-        assertEquals(dog.move(x, y), expectedResult, String.format("The entered coordinates: x=%d, y=%d aren't related to the yard xMin=%d, xMax=%d, yMin=%d, yMax=%d ", x, y, FARM_MIN_CORNER_X, FARM_MAX_CORNER_X, FARM_MIN_CORNER_Y, FARM_MAX_CORNER_Y));
+        assertEquals(dog.move(x, y), expectedResult, String.format("The entered coordinates: x=%d, y=%d aren't related to the yard xMin=%d, xMax=%d, yMin=%d, yMax=%d ",
+                x,
+                y,
+                FARM_MIN_CORNER_X,
+                FARM_MAX_CORNER_X,
+                FARM_MIN_CORNER_Y,
+                FARM_MAX_CORNER_Y));
     }
 
     @Test(dataProvider = "getDogDataBlock", dataProviderClass = DataProviders.class)
     public void checkMoveForDogToBlock(int x, int y, boolean expectedResult) {
-        assertEquals(dog.move(x, y), expectedResult, String.format("The entered coordinates: x=%d, y=%d aren't related to the yard xMin=%d, xMax=%d, yMin=%d, yMax=%d ", x, y, BLOCK_MIN_CORNER_X, BLOCK_MAX_CORNER_X, BLOCK_MIN_CORNER_Y, BLOCK_MAX_CORNER_Y));
+        assertEquals(dog.move(x, y), expectedResult, String.format("The entered coordinates: x=%d, y=%d aren't related to the yard xMin=%d, xMax=%d, yMin=%d, yMax=%d ",
+                x,
+                y,
+                BLOCK_MIN_CORNER_X,
+                BLOCK_MAX_CORNER_X,
+                BLOCK_MIN_CORNER_Y,
+                BLOCK_MAX_CORNER_Y));
     }
 
     @Test(dataProvider = "getSheepDataFarm", dataProviderClass = DataProviders.class)
     public void checkMoveForSheepToFarm(int x, int y, boolean expectedResult) {
-        assertEquals(sheep.move(x, y), expectedResult, String.format("The entered coordinates: x=%d, y=%d aren't related to the yard xMin=%d, xMax=%d, yMin=%d, yMax=%d ", x, y, FARM_MIN_CORNER_X, FARM_MAX_CORNER_X, FARM_MIN_CORNER_Y, FARM_MAX_CORNER_Y));
+        assertEquals(sheep.move(x, y), expectedResult, String.format("The entered coordinates: x=%d, y=%d aren't related to the yard xMin=%d, xMax=%d, yMin=%d, yMax=%d ",
+                x,
+                y,
+                FARM_MIN_CORNER_X,
+                FARM_MAX_CORNER_X,
+                FARM_MIN_CORNER_Y,
+                FARM_MAX_CORNER_Y));
     }
 
     @Test(dataProvider = "getSheepDataBlock", dataProviderClass = DataProviders.class)
     public void checkMoveForSheepToBlock(int x, int y, boolean expectedResult) {
-        assertEquals(sheep.move(x, y), expectedResult, String.format("The entered coordinates: x=%d, y=%d aren't related to the yard xMin=%d, xMax=%d, yMin=%d, yMax=%d ", x, y, BLOCK_MIN_CORNER_X, BLOCK_MAX_CORNER_X, BLOCK_MIN_CORNER_Y, BLOCK_MAX_CORNER_Y));
+        assertEquals(sheep.move(x, y), expectedResult, String.format("The entered coordinates: x=%d, y=%d aren't related to the yard xMin=%d, xMax=%d, yMin=%d, yMax=%d ",
+                x,
+                y,
+                BLOCK_MIN_CORNER_X,
+                BLOCK_MAX_CORNER_X,
+                BLOCK_MIN_CORNER_Y,
+                BLOCK_MAX_CORNER_Y));
     }
 
 }

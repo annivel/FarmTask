@@ -1,19 +1,20 @@
+package providers;
+
 import org.testng.annotations.DataProvider;
 
-public interface DataProviders {
+public class DataProviders {
 
-    int FARM_MIN_CORNER_X = 40;
-    int FARM_MAX_CORNER_X = 130;
-    int FARM_MIN_CORNER_Y = 30;
-    int FARM_MAX_CORNER_Y = 90;
-
-    int BLOCK_MIN_CORNER_X = 80;
-    int BLOCK_MAX_CORNER_X = 110;
-    int BLOCK_MIN_CORNER_Y = 50;
-    int BLOCK_MAX_CORNER_Y = 70;
+    public static final int FARM_MIN_CORNER_X = 40;
+    public static final  int FARM_MAX_CORNER_X = 130;
+    public static final  int FARM_MIN_CORNER_Y = 30;
+    public static final int FARM_MAX_CORNER_Y = 90;
+    public static final   int BLOCK_MIN_CORNER_X = 80;
+    public static final int BLOCK_MAX_CORNER_X = 110;
+    public static final int BLOCK_MIN_CORNER_Y = 50;
+    public static final  int BLOCK_MAX_CORNER_Y = 70;
 
     @DataProvider
-    default Object[][] getDogDataFarm() {
+    public static Object[][] getDogDataFarm() {
         return new Object[][]{
                 {60, 40, true},
                 {40, 30, true},
@@ -31,7 +32,7 @@ public interface DataProviders {
     }
 
     @DataProvider
-    default Object[][] getSheepDataFarm() {
+    public static Object[][] getSheepDataFarm() {
         return new Object[][]{
                 {67, 82, true},
                 {-10, 15, false},
@@ -50,7 +51,7 @@ public interface DataProviders {
     }
 
     @DataProvider
-    default Object[][] getSheepDataBlock() {
+    public static Object[][] getSheepDataBlock() {
         return new Object[][]{
                 {100, 60, true},
                 {81, 51, true},
@@ -73,7 +74,7 @@ public interface DataProviders {
     }
 
     @DataProvider
-    default Object[][] getDogDataBlock() {
+    public static Object[][] getDogDataBlock() {
         return new Object[][]{
                 {90, 60, false},
                 {80, 50, false},

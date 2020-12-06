@@ -14,4 +14,13 @@ public class Dog extends ActionAnimal {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "x=" + x +
+                ", y=" + y +
+                ", farm=" + farm +
+                '}';
+    }
 }

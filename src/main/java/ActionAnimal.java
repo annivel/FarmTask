@@ -10,5 +10,6 @@ public abstract class ActionAnimal {
     }
 
     public abstract boolean move(int x, int y);
+
 }
 

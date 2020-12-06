@@ -15,5 +15,13 @@ public class Farm {
     public Rectangle getBlockSquare() {
         return blockSquare;
     }
+
+    @Override
+    public String toString() {
+        return "Farm{" +
+                "farmSquare=" + farmSquare +
+                ", blockSquare=" + blockSquare +
+                '}';
+    }
 }
 

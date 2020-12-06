@@ -1,6 +1,9 @@
 import org.testng.annotations.Test;
 import providers.DataProviders;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.testng.Assert.assertEquals;
 import static providers.DataProviders.*;
 
@@ -55,5 +58,33 @@ public class TestSuites {
                 BLOCK_MIN_CORNER_Y,
                 BLOCK_MAX_CORNER_Y));
     }
+    @Test
+    public void getDogsByXLessThan100(){
+        List<Dog> dogs = Arrays.asList(
+                new Dog(farm, 70, 50),
+                new Dog(farm, 69, 30),
+                new Dog(farm, 40, 90),
+                new Dog(farm, 120, 60),
+                new Dog(farm, 130, 90),
+                new Dog(farm, 75, 49),
+                new Dog(farm, 115, 60),
+                new Dog(farm, 40, 40),
+                new Dog(farm, 79, 51),
+                new Dog(farm, 120, 60),
+                new Dog(farm, 50, 80),
+                new Dog(farm, 45, 60),
+                new Dog(farm, 75, 40),
+                new Dog(farm, 79, 49),
+                new Dog(farm, 111, 50),
+                new Dog(farm, 129, 71),
+                new Dog(farm, 42, 69),
+                new Dog(farm, 119, 50),
+                new Dog(farm, 125, 70),
+                new Dog(farm, 45, 30));
+
+        dogs.stream().filter(dog -> dog.x < 100).forEach(System.out::println);
+
+    }
+
 
 }

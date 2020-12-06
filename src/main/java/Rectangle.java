@@ -16,4 +16,14 @@ public class Rectangle {
         return x >= minX && y >= minY
                 && x <= maxX && y <= maxY;
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "minX=" + minX +
+                ", minY=" + minY +
+                ", maxX=" + maxX +
+                ", maxY=" + maxY +
+                '}';
+    }
 }
